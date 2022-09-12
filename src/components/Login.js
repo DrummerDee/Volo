@@ -1,5 +1,5 @@
 import React from "react"
-
+import {Link} from "react-router-dom"
 
 
 
@@ -13,7 +13,7 @@ const Login = () => {
         <label> Password </label>
         <input type="password" name="password" />
         <div id="remember">
-            <button id="forgotPwdBtn"> Forgot Password </button>
+            <Link to ="/ForgotPass"><button id="forgotPwdBtn"> Forgot Password </button></Link>
         </div>
         <input type="submit" value="Sign In" id="submit"/>
     </form>
