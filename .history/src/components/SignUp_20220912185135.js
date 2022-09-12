@@ -19,7 +19,7 @@ const SignUp = () => {
         <label> Password </label>
         <input type="password" name="password" placeholder="Enter Password" id="password" />
         <span class="eye">
-            <img src={FaEye} id="togglePassword"/>
+            <img src={} id="togglePassword"></i>
         </span>
     </div>
     <div>

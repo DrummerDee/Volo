@@ -1,6 +1,6 @@
 import React from 'react';
 import FaEye from 'react-icons/fa';
-import FaEyeSlash from 'react-icons/fa';
+import FaEyeSlash from 'react-'
 
 const SignUp = () => {
     return (
@@ -19,7 +19,7 @@ const SignUp = () => {
         <label> Password </label>
         <input type="password" name="password" placeholder="Enter Password" id="password" />
         <span class="eye">
-            <img src={FaEye} id="togglePassword"/>
+            <i class="fa-sharp fa-solid fa-eye-slash" id="togglePassword"></i>
         </span>
     </div>
     <div>
