@@ -4,9 +4,8 @@ import { useNavigate } from "react-router-dom";
 const Dashboard = () => {
   const navigate = useNavigate();
 
+  const user = JSON.parse(localStorage.getItem('VoloUser'))
   const handleSubmit = () => {
-    // e.preventDefault();
-    console.log("HAI");
 
     const response = fetch("http://localhost:1212/logout", {
       method: "GET",
@@ -15,6 +14,7 @@ const Dashboard = () => {
       },
     });
     localStorage.removeItem("VoloLoggedIn");
+    localStorage.removeItem("VoloUser");
     navigate("/login");
   };
 
@@ -22,7 +22,7 @@ const Dashboard = () => {
     <>
       <header>
         <div>
-          <h1>Welcome user</h1>
+          <h1>Welcome {user.userName}</h1>
           <input
             onClick={handleSubmit}
             type="submit"

@@ -1,8 +1,11 @@
 import React from "react";
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const SignUp = () => {
+
+  const navigate = useNavigate()
+
   // States for registration
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -72,8 +75,10 @@ const SignUp = () => {
         setErrorMessage(data.error);
       } else {
         setSubmitted(true);
-        setError(false);
-        setErrorMessage("");
+        console.log("loggedIn");
+        localStorage.setItem("VoloLoggedIn", true);
+        localStorage.setItem("VoloUser", JSON.stringify(data));
+        navigate("/dashboard");
       }
     }
   };
