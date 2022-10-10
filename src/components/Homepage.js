@@ -12,12 +12,12 @@ const Homepage = () => {
         <img src={lamp}/>
         </div>
     </header> 
-    <main class="container">
-    <section class="containerleft"> 
+    <main className="container">
+    <section className="containerleft"> 
         <h2> Let's make a list... Together </h2>
-        <div class="leftwrapper">
+        <div className="leftwrapper">
             <Link to="/Login"> Login</Link>
-            <Link to="/signup"> Sign Up</Link>
+            <Link to="/SignUp"> SignUp</Link>
         </div>
     </section>
 </main>
