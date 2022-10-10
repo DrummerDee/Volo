@@ -18,7 +18,7 @@ const Login = () => {
         <input type="submit" value="Sign In" id="submit"/>
     </form>
     <div class="text"> 
-        <h4> New Shopper? <a href="/signup"> Sign Up </a></h4>
+        <h4> New Shopper? <Link to ="/SignUp"><button id="forgotPwdBtn"> Sign Up </button></Link></h4>
     </div>
 </>
 )}
