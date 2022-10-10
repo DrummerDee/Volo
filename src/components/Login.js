@@ -54,6 +54,7 @@ const Login = () => {
         setError(false);
         console.log("loggedIn");
         localStorage.setItem("VoloLoggedIn", true);
+        localStorage.setItem("VoloUser", JSON.stringify(data));
         navigate("/dashboard");
       }
     }
