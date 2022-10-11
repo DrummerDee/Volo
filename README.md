@@ -6,7 +6,11 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 In the project directory, you can run:
 
-### `npm start`
+
+### add .env file
+Add .env file to the config folder of backend
+In .env file, add port and DB_STRING values
+### `npm run dev` to run both client and server concurrently
 
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
@@ -14,6 +18,9 @@ Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 The page will reload when you make changes.\
 You may also see any lint errors in the console.
 
+
+Front end will run at http://localhost:3000
+Backend will run at https://localhost:1212(or whatever port value is given in your .env file)
 ### `npm test`
 
 Launches the test runner in the interactive watch mode.\
