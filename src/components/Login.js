@@ -2,7 +2,23 @@
 
 import React from "react";
 import { useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+import Avatar from '@mui/material/Avatar';
+import Button from '@mui/material/Button';
+import CssBaseline from '@mui/material/CssBaseline';
+import TextField from '@mui/material/TextField';
+import FormControlLabel from '@mui/material/FormControlLabel';
+import Checkbox from '@mui/material/Checkbox';
+import Link from '@mui/material/Link';
+import Grid from '@mui/material/Grid';
+import Box from '@mui/material/Box';
+import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
+import Typography from '@mui/material/Typography';
+import Container from '@mui/material/Container';
+import { createTheme, ThemeProvider } from '@mui/material/styles';
+import Alert from '@mui/material/Alert';
+
+const theme = createTheme();
 
 const Login = () => {
   const navigate = useNavigate();
@@ -61,49 +77,81 @@ const Login = () => {
   };
 
   // Showing error message if error is true
-  const displayErrorMessage = () => {
+  const DisplayErrorMessage = () => {
     return (
-      <div
-        className="error"
-        style={{
-          display: error ? "" : "none",
-        }}
-      >
-        <h1>{errorMessage}</h1>
-      </div>
+
+       error ?  <Alert severity="error">{errorMessage}</Alert> : ""
     );
   };
   return (
-    <>
-      <h1> Welcome Back Shopper </h1>
-      <form action="" method="POST" autoComplete="off">
-        <div className="messages">{displayErrorMessage()}</div>
-        <label> Email </label>
-        <input onChange={handleEmail} type="email" name="email" />
-        <label> Password </label>
-        <input onChange={handlePassword} type="password" name="password" />
-        <div id="remember">
-          <Link to="/ForgotPass">
-            <button id="forgotPwdBtn"> Forgot Password </button>
-          </Link>
-        </div>
-        <input
-          onClick={handleSubmit}
-          type="submit"
-          value="Log In"
-          id="log__in"
-        />
-      </form>
-      <div className="text">
-        <h4>
-          {" "}
-          New Shopper?{" "}
-          <Link to="/SignUp">
-            <button id="forgotPwdBtn"> Sign Up </button>
-          </Link>
-        </h4>
-      </div>
-    </>
+    <main>
+        <h1> Welcome Back Shopper </h1>
+      <DisplayErrorMessage />
+      <ThemeProvider theme={theme}>
+      <Container component="main" maxWidth="xs">
+        <CssBaseline />
+        <Box
+          sx={{
+            marginTop: 8,
+            display: 'flex',
+            flexDirection: 'column',
+            alignItems: 'center',
+          }}
+        >
+          <Avatar sx={{ m: 1, bgcolor: 'secondary.main' }}>
+            <LockOutlinedIcon />
+          </Avatar>
+          <Typography component="h1" variant="h5">
+            Sign In
+          </Typography>
+          <Box component="form" noValidate onSubmit={handleSubmit} sx={{ mt: 3 }}>
+            <Grid container spacing={2}>
+              <Grid item xs={12}>
+                <TextField
+                  onChange={handleEmail}
+                  required
+                  fullWidth
+                  id="email"
+                  label="Email Address"
+                  name="email"
+                  autoComplete="email"
+                />
+              </Grid>
+              <Grid item xs={12}>
+                <TextField
+                  onChange={handlePassword}
+                  required
+                  fullWidth
+                  name="password"
+                  label="Password"
+                  type="password"
+                  id="password"
+                  autoComplete="new-password"
+                />
+              </Grid>
+            </Grid>
+            <Button
+              onClick={handleSubmit}
+              type="submit"
+              fullWidth
+              variant="contained"
+              sx={{ mt: 3, mb: 2 }}
+            >
+              Sign In
+            </Button>
+            <Grid container justifyContent="flex-end">
+              <Grid item>
+                <Link href="/SignUp" variant="body2">
+                  New user? Sign Up
+                </Link>
+              </Grid>
+            </Grid>
+          </Box>
+        </Box>
+      </Container>
+    </ThemeProvider>
+    </main>
+      
   );
 };
 export default Login;

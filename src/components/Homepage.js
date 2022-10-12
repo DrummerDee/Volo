@@ -1,27 +1,45 @@
 import React from "react"
-import {Link} from "react-router-dom"
 import lamp from "../assets/lamp.png"
-
+import Link from '@mui/material/Link';
+import Button from '@mui/material/Button';
 
 
 const Homepage = () => {
-    return (<>
-    <header>
+    return (
+    <div class="container">
+        <main>
+        <header>
         <div>
         <h1>Welcome to Volo</h1>
         <img src={lamp}/>
         </div>
     </header> 
-    <main className="container">
     <section className="containerleft"> 
         <h2> Let's make a list... Together </h2>
         <div className="leftwrapper">
-            <Link to="/Login"> Login</Link>
-            <Link to="/SignUp"> SignUp</Link>
+        <Button
+              type="submit"
+              fullWidth
+              variant="contained"
+              sx={{ mt: 3, mb: 2 }}
+              href="/signUp"
+            >Sign Up
+        </Button>
+            <Button
+              type="submit"
+              fullWidth
+              variant="contained"
+              sx={{ mt: 3, mb: 2 }}
+              href="/login"
+            >
+             Login
+            </Button>
+            
         </div>
     </section>
-</main>
-<h5>Photo by <a href="https://unsplash.com/@cathrynlavery?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText%22%3E"> Cathryn Lavery </a> on <a href="https://unsplash.com/s/photos/list?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText%22%3E"> Unsplash </a></h5>
-    </>)}
+    <h5>Photo by <a href="https://unsplash.com/@cathrynlavery?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText%22%3E"> Cathryn Lavery </a> on <a href="https://unsplash.com/s/photos/list?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText%22%3E"> Unsplash </a></h5>
+        </main>
+    </div>
+)}
 
 export default Homepage
