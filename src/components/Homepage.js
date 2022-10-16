@@ -1,5 +1,5 @@
 import React from "react"
-import lamp from "../assets/lamp.png"
+// import lamp from "../assets/lamp.png"
 import Link from '@mui/material/Link';
 import Button from '@mui/material/Button';
 
@@ -11,7 +11,6 @@ const Homepage = () => {
         <header>
         <div>
         <h1>Welcome to Volo</h1>
-        <img src={lamp}/>
         </div>
     </header> 
     <section className="containerleft"> 
