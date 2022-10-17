@@ -20,7 +20,8 @@ const Dashboard = () => {
 
   return (
     <div class="container">
-<header>
+      <div class="main">
+      <header>
         <div>
           <h1>Welcome {user.userName}</h1>
           <input
@@ -31,12 +32,12 @@ const Dashboard = () => {
           />
         </div>
       </header>
-      <main>
         <section className="containerleft">
           <h2> Let's make a list... Together </h2>
           <div className="leftwrapper"></div>
         </section>
-      </main>
+      </div>
+
     </div>
   );
 };
