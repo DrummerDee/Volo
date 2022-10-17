@@ -20,7 +20,12 @@ const Dashboard = () => {
 
   return (
     <div class="container">
+<<<<<<< HEAD
 <header>
+=======
+      <div class="main">
+      <header>
+>>>>>>> origin/latest
         <div>
           <h1>Welcome {user.userName}</h1>
           <input
@@ -31,12 +36,20 @@ const Dashboard = () => {
           />
         </div>
       </header>
+<<<<<<< HEAD
       <main>
+=======
+>>>>>>> origin/latest
         <section className="containerleft">
           <h2> Let's make a list... Together </h2>
           <div className="leftwrapper"></div>
         </section>
+<<<<<<< HEAD
       </main>
+=======
+      </div>
+
+>>>>>>> origin/latest
     </div>
   );
 };
