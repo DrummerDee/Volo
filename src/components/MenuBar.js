@@ -24,6 +24,8 @@ import ListItemText from '@mui/material/ListItemText';
 
 export default function ManuBar() {
   const navigate = useNavigate();
+  const [hideMobileMenu, setHideMobileMenu] = useState(true);
+
 
   const handleSubmit = () => {
     const response = fetch("http://localhost:1212/logout", {
@@ -38,8 +40,7 @@ export default function ManuBar() {
   };
 
   const showMobileMenu = () => {
-      const mobileMenu = document.querySelector('.hambergurMenu')
-      mobileMenu.classList.toggle('hidden')
+    hideMobileMenu ? setHideMobileMenu(false) : setHideMobileMenu(true); 
   }
 
   return (
@@ -70,7 +71,7 @@ export default function ManuBar() {
         
       </Toolbar>
     </AppBar>
-      <div class="hambergurMenu hidden">
+    <div className={`hambergurMenu${hideMobileMenu ?' hidden' : ''}`}>
             <List>
               <ListItem alignItems="flex-start" disablePadding>
                 <ListItemButton >

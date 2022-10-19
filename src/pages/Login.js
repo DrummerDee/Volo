@@ -17,6 +17,8 @@ import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import Alert from '@mui/material/Alert';
+import API_URL from '../config/config'
+
 
 const theme = createTheme();
 
@@ -54,7 +56,7 @@ const Login = () => {
       setErrorMessage("Please fill all the fields");
       return;
     } else {
-      const response = await fetch("http://localhost:1212/login", {
+      const response = await fetch(`${API_URL}/login`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

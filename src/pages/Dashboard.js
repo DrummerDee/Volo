@@ -1,6 +1,6 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import MenuBar from "./MenuBar";
+import MenuBar from "../components/MenuBar";
 
 const Dashboard = () => {
   const user = JSON.parse(localStorage.getItem("VoloUser"));
