@@ -5,6 +5,7 @@ import Login from "./pages/Login";
 import SignUp from "./pages/SignUp";
 import ForgotPass from "./pages/ForgotPass";
 import Dashboard from "./pages/Dashboard";
+import Settings from "./pages/Settings";
 import RequireAuth from "./middleware/RequireAuth";
 import RedirectIfAuthenticated from "./middleware/RedirectIfAuthenticated";
 
@@ -28,6 +29,10 @@ function App() {
         <Route
           path="/dashboard"
           element={<RequireAuth Component={Dashboard} />}
+        />
+        <Route
+          path="/dashboard/settings"
+          element={<RequireAuth Component={Settings} />}
         />
       </Routes>
     </Router>
