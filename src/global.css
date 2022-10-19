@@ -30,3 +30,31 @@ main{
   align-items: center;
   flex-direction: column;
 }
+
+.dashboard {
+  width : 100%;
+  height : 100%;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+
+.hidden {
+  display: none;
+}
+
+.hambergurMenu {
+  background: #1976d2;
+  color: white;
+  
+}
+
+@media (max-width: 650px) {
+  .hambergurMenuIcon {
+    display: block;
+  }
+
+  .desktopMenu {
+    display: none;
+  }
+}
