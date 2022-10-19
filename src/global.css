@@ -48,6 +48,11 @@ main{
   color: white;
   
 }
+@media (min-width: 651px) {
+  .hambergurMenu {
+    display: none;
+  }
+}
 
 @media (max-width: 650px) {
   .hambergurMenuIcon {
