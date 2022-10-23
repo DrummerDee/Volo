@@ -58,6 +58,8 @@ const Login = () => {
     } else {
       const response = await fetch(`${API_URL}/login`, {
         method: "POST",
+        withCredentials: true,
+        credentials: 'include',
         headers: {
           "Content-Type": "application/json",
         },

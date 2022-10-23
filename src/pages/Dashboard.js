@@ -13,7 +13,7 @@ const Dashboard = () => {
       </header>
       <div className="container">
         <div className="main">
-          <section className="containerleft">
+        <section className="containerleft">
             <div>
               <h1>Welcome {user.userName}</h1>
             

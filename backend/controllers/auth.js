@@ -30,13 +30,13 @@ exports.postLogin = (req, res, next) => {
       if (err) {
         return next(err);
       }
-
       res.json(req.user);
     });
   })(req, res, next);
 };
 
 exports.logout = (req, res) => {
+  console.log(req.user)
   req.logout(() => {
     console.log("User has logged out.");
   });

@@ -33,10 +33,10 @@ main{
 
 .dashboard {
   width : 100%;
-  height : 100%;
+  height : 100vh;
+  display: flex;
   flex-direction: column;
-  justify-content: flex-end;
-  align-items: flex-end;
+  
 }
 
 .hidden {
@@ -48,6 +48,48 @@ main{
   color: white;
   
 }
+/* --------FRIENDS---------- */
+.friends {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-left: 2rem;
+}
+
+
+
+.friends-content {
+  margin-right: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  margin-top: 3rem;
+  gap: 2rem;
+}
+
+.allUsers {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.drawerlist::hover {
+  background: grey;
+}
+
+.userCard {
+  width: 300px;
+}
+
+@media (max-width: 650px) {
+  .userCard {
+    width: 170px;
+  }
+}
+
+/* ----------------------- */
 @media (min-width: 651px) {
   .hambergurMenu {
     display: none;
@@ -62,4 +104,11 @@ main{
   .desktopMenu {
     display: none;
   }
+
 }
+
+/* @media (max-width: 400px) {
+  .drawerText {
+    display: none;
+  }
+} */
